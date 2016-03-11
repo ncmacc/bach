@@ -5,7 +5,7 @@
             :url "http://www.eclipse.org/legal/epl-v10.html"}
   :dependencies [[org.clojure/clojure "1.7.0"]
                  [clj-yaml "0.4.0"]
-                 [de.ubercode.clostache/clostache "1.4.0"]
+                 [selmer "1.0.2"]
                  [optimus "0.18.4"]
                  [ring "1.4.0"]
                  [stasis "2.3.0"]]
