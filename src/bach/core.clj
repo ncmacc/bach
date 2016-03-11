@@ -9,10 +9,12 @@
   (yaml/parse-string (slurp (str "resources/data/" key ".yml"))))
 
 (defn get-layout [key]
-  (slurp (str "resources/layouts/" key ".html")))
+  (str "layouts/" key ".mustache"))
 
-(def pages
-  {"/" (parser/render (get-layout "program") (get-program-attrs "wreach-out"))
+(defn render-page [])
+
+(defn pages []
+  {"/" (parser/render-resource (get-layout "program") (get-program-attrs "wreach-out") {:something "asdfasdf"})
    "/wot/" "<h2>test</h2>"})
 
 (def app (stasis/serve-pages pages))
